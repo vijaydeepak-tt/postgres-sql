@@ -4,25 +4,32 @@
 
 ### Resources
 
-    **Install DB**
-    [POSTGRES SQL](https://www.enterprisedb.com/postgres-tutorials/installation-postgresql-mac-os)
+**Install DB**
 
-    **DB Viewer**
-    [PG Admin](https://www.pgadmin.org/download/)
+[POSTGRES SQL](https://www.enterprisedb.com/postgres-tutorials/installation-postgresql-mac-os)
 
-    **DB Link**
-    [dvdrental](https://www.pgadmin.org/download/)
+**DB Viewer**
 
-    **Restore DB**
-    ```
-    pg_restore -U postgres -d dvdrental /Users/userId/Downloads/dvdrental.tar
-    ```
-    [Restore DB Reference](https://www.postgresqltutorial.com/postgresql-administration/postgresql-restore-database/)
+[PG Admin](https://www.pgadmin.org/download/)
 
-    **POSTGRES SQL Tutorial**
-    [Tutorial](https://www.postgresqltutorial.com/postgresql-getting-started/)
+**DB Link**
 
-    **Set POSTGRES SQL Path**
-    ```
-    export PATH=$PATH:/Library/PostgreSQL/16/bin
-    ```
+[dvdrental](./dvdrental.tar)
+
+**Restore DB**
+
+```
+pg_restore -U postgres -d dvdrental /Users/userId/Downloads/dvdrental.tar
+```
+
+[Restore DB Reference](https://www.postgresqltutorial.com/postgresql-administration/postgresql-restore-database/)
+
+**POSTGRES SQL Tutorial**
+
+[Tutorial](https://www.postgresqltutorial.com/postgresql-getting-started/)
+
+**Set POSTGRES SQL Path**
+
+```
+export PATH=$PATH:/Library/PostgreSQL/16/bin
+```
