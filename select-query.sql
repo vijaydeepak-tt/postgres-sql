@@ -127,3 +127,15 @@ SELECT COUNT(*) AS "Number of Transactions" FROM payment;
 SELECT customer_id, SUM(amount) AS "Total Spent" FROM payment GROUP BY customer_id;
 
 SELECT customer_id, SUM(amount) AS "Total Spent" FROM payment GROUP BY customer_id HAVING SUM(amount) < 100;
+
+
+--Arithmetic Operator
+--SELECT column_name1 + column_name2 FROM table_name;
+
+SELECT amount * 12 AS "Annual Income" FROM payment;
+
+SELECT * FROM employee WHERE salary + allowance <> 25000;
+SELECT * FROM employee WHERE salary + allowance != 25000;
+
+--SELECT column_name1 - column_name2 FROM table_name;
+SELECT salary - tax FROM employee;
