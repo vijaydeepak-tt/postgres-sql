@@ -139,3 +139,17 @@ SELECT * FROM employee WHERE salary + allowance != 25000;
 
 --SELECT column_name1 - column_name2 FROM table_name;
 SELECT salary - tax FROM employee;
+
+--SUB QUERY
+SELECT * FROM Orders Where CustomerID in (SELECT CustomerID FROM Customers);
+
+--ALL
+SELECT * FROM Orders Where Price > ALL (SELECT Price FROM Products);
+--ANY
+SELECT * FROM Orders Where Price > ANY (SELECT Price FROM Products);
+--EXISTS
+SELECT * FROM Orders Where EXISTS (SELECT Price FROM Products);
+--NOT EXISTS
+SELECT * FROM Orders Where NOT EXISTS (SELECT Price FROM Products);
+-- = 
+SELECT OrderID FROM Orders Where Price =  (SELECT MAX(Price) FROM Orders);
