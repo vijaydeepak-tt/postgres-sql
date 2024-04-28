@@ -128,3 +128,30 @@ WHERE Type in (SELECT CASE
                 END as ItemType
                 FROM MenuItems
             )
+
+-- Variables
+
+-- Outside
+
+SET @variable_name = 100;
+SELECT * FROM orders WHERE OrderQty > @variable_name;
+
+SELECT @max_price := MAX(OrderTotal) FROM orders;
+SELECT @max_price;
+
+-- Inside SELECT
+-- stores value in that variable
+SELECT AVG(OrderTotal) INTO @variable_name FROM orders;
+SELECT @variable_name
+
+-- User defined functions
+
+CREATE FUNCTION GetTotalCost(Cost DECIMAL(5, 2)) RETURNS DECIMAL(5, 2) DETERMINISTIC
+BEGIN
+    IF (Cost >= 100 AND Cost < 500) THEN SET Cost = Cost - (Cost * 0.1);
+    ELSEIF (Cost >= 500) THEN SET Cost = Cost - (Cost * 0.2);
+    END IF;
+    RETURN (Cost);
+END;
+
+DROP GetTotalCost;
