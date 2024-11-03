@@ -33,3 +33,9 @@ pg_restore -U postgres -d dvdrental /Users/userId/Downloads/dvdrental.tar
 ```
 export PATH=$PATH:/Library/PostgreSQL/16/bin
 ```
+
+**Open Jupyter notebook**
+
+```
+python3 -m jupyter notebook
+```
