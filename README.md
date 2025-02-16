@@ -34,6 +34,13 @@ pg_restore -U postgres -d dvdrental /Users/userId/Downloads/dvdrental.tar
 export PATH=$PATH:/Library/PostgreSQL/16/bin
 ```
 
+**Then create a virtual environment in your project directory**
+
+```
+python3 -m venv env
+source env/bin/activate
+```
+
 **Open Jupyter notebook**
 
 ```
